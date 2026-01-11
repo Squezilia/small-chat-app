@@ -24,10 +24,10 @@ export default defineNuxtConfig({
       compilerOptions: {
         baseUrl: '.',
         paths: {
-          '@athanasia/frontend/*': ['./*'],
-          '@athanasia/backend/*': ['../backend/src/*'],
-          '@athanasia/database/*': ['../../packages/database/src/*'],
-          '@athanasia/config/*': ['../../packages/config/src/*'],
+          '@lena/frontend/*': ['./*'],
+          '@lena/backend/*': ['../backend/src/*'],
+          '@lena/database/*': ['../../packages/database/src/*'],
+          '@lena/config/*': ['../../packages/config/src/*'],
 
           '#app': ['./.nuxt/app'],
           '#imports': ['./.nuxt/imports'],

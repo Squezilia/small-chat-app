@@ -62,7 +62,7 @@ const organizations = [
     members: '8/20 üye',
   },
   {
-    name: 'Athanasia Studio',
+    name: 'Lena Studio',
     role: 'Üye',
     members: '3/10 üye',
   },
@@ -82,8 +82,8 @@ const lastLogin = {
       <div class="space-y-2">
         <Heading>Güvenlik</Heading>
         <p class="text-muted-foreground max-w-3xl">
-          Better Auth oturumları, cihaz izinleri ve kurtarma seçenekleri için tasarım
-          maketi. Buradaki butonlar henüz işlevsel değil.
+          Better Auth oturumları, cihaz izinleri ve kurtarma seçenekleri için
+          tasarım maketi. Buradaki butonlar henüz işlevsel değil.
         </p>
       </div>
       <div class="ml-auto flex gap-2">
@@ -102,7 +102,9 @@ const lastLogin = {
       <Card class="lg:col-span-2">
         <CardHeader>
           <CardTitle>Giriş yöntemleri</CardTitle>
-          <CardDescription>Passkey, OAuth ve yedek kod tasarımı</CardDescription>
+          <CardDescription
+            >Passkey, OAuth ve yedek kod tasarımı</CardDescription
+          >
         </CardHeader>
         <CardContent class="space-y-4">
           <div
@@ -129,8 +131,8 @@ const lastLogin = {
             <AlertTriangle class="size-4 text-amber-500" />
             <AlertTitle>Öneri</AlertTitle>
             <AlertDescription>
-              Passkey ve TOTP birlikte etkinleştirildiğinde riskli cihaz oturumları otomatik
-              olarak askıya alınabilir.
+              Passkey ve TOTP birlikte etkinleştirildiğinde riskli cihaz
+              oturumları otomatik olarak askıya alınabilir.
             </AlertDescription>
           </Alert>
         </CardContent>
@@ -184,7 +186,9 @@ const lastLogin = {
         <CardHeader class="flex-row items-start justify-between gap-3">
           <div>
             <CardTitle>Organizasyonlar</CardTitle>
-            <CardDescription>organization eklentisi için maket üyelikler.</CardDescription>
+            <CardDescription
+              >organization eklentisi için maket üyelikler.</CardDescription
+            >
           </div>
           <Button variant="outline" size="sm">
             <Users class="size-4" />
@@ -243,7 +247,9 @@ const lastLogin = {
         <CardHeader class="flex-row items-start justify-between gap-4">
           <div>
             <CardTitle>Kurtarma seçenekleri</CardTitle>
-            <CardDescription>Statik içerik, akış daha sonra bağlanacak.</CardDescription>
+            <CardDescription
+              >Statik içerik, akış daha sonra bağlanacak.</CardDescription
+            >
           </div>
           <Button variant="outline" size="sm">Kurtarma ayarları</Button>
         </CardHeader>

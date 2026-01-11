@@ -1,0 +1,269 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-navigation: var(--navigation);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --font-mono: "DM Mono",
+    'Courier New',
+    Courier,
+    monospace;
+  --font-heading: "DM Sans",
+    "DM Sans Fallback: BlinkMacSystemFont",
+    "DM Sans Fallback: Segoe UI",
+    "DM Sans Fallback: Helvetica Neue",
+    "DM Sans Fallback: Arial",
+    "DM Sans Fallback: Noto Sans",
+    Arial,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  --font-display: "Geist",
+    "Geist Fallback: BlinkMacSystemFont",
+    "Geist Fallback: Segoe UI",
+    "Geist Fallback: Helvetica Neue",
+    "Geist Fallback: Arial",
+    "Geist Fallback: Noto Sans",
+    Arial,
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
+  --breakpoint-xs: 23.5rem;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--reka-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--reka-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--reka-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--reka-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+:root {
+  /* Light (Porcelain) */
+  --background: oklch(0.985 0.01 20);
+  /* kırık-beyaz, hafif sıcak */
+  --foreground: oklch(0.18 0.02 255);
+  /* koyu soğuk gri */
+
+  --card: oklch(0.995 0.006 20);
+  /* kartlar daha “temiz” */
+  --card-foreground: var(--foreground);
+
+  --popover: oklch(0.995 0.006 20);
+  --popover-foreground: var(--foreground);
+
+  /* Crimson (noble, pink değil) */
+  --primary: oklch(0.56 0.23 18);
+  --primary-foreground: oklch(0.985 0 0);
+
+  /* Soft neutrals */
+  --secondary: oklch(0.96 0.01 20);
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.965 0.008 20);
+  --muted-foreground: oklch(0.50 0.02 255);
+
+  /* Accent: “line / glass” hissi için */
+  --accent: oklch(0.955 0.015 20);
+  --accent-foreground: var(--foreground);
+
+  --navigation: oklch(0.975 0.01 20);
+
+  --destructive: oklch(0.53 0.23 25);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Borders / inputs: “ajans royal” değil, ince-şık */
+  --border: oklch(0.90 0.02 18);
+  --input: oklch(0.93 0.015 20);
+  --ring: oklch(0.56 0.23 18);
+
+  /* Charts (uyumlu) */
+  --chart-1: oklch(0.62 0.20 18);
+  --chart-2: oklch(0.62 0.12 210);
+  --chart-3: oklch(0.45 0.09 255);
+  --chart-4: oklch(0.80 0.10 85);
+  --chart-5: oklch(0.72 0.12 35);
+
+  --radius: 0.625rem;
+
+  /* Sidebar */
+  --sidebar: oklch(0.99 0.006 20);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: oklch(0.965 0.008 20);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: oklch(0.90 0.01 20);
+  --sidebar-ring: var(--ring);
+
+  /* Futuristic grid: kırmızıyı çok düşük opaklıkla çizgi yap */
+  --background-grid:
+    linear-gradient(90deg, oklch(0.56 0.23 18 / 0.08) 1px, #0000 1px),
+    linear-gradient(oklch(0.56 0.23 18 / 0.08) 1px, #0000 1px);
+}
+
+.dark {
+  /* Dark (AMOLED-ish, but not #000) */
+  --background: oklch(0.045 0.01 255);
+  /* neredeyse siyah, çok hafif soğuk ton */
+  --foreground: oklch(0.965 0.02 20);
+
+  /* Surfaces (bir tık yukarı) */
+  --card: oklch(0.075 0.012 255);
+  --card-foreground: var(--foreground);
+
+  --popover: oklch(0.075 0.012 255);
+  --popover-foreground: var(--foreground);
+
+  /* Crimson glow (aynı karakter) */
+  --primary: oklch(0.62 0.24 18);
+  --primary-foreground: oklch(0.985 0 0);
+
+  --secondary: oklch(0.11 0.01 255);
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.11 0.01 255);
+  --muted-foreground: oklch(0.78 0.02 255);
+
+  /* Accent: dark surface gibi kalsın (gold yok) */
+  --accent: oklch(0.11 0.01 255);
+  --accent-foreground: var(--foreground);
+
+  /* Nav bar: background’dan 1 tık açık */
+  --navigation: oklch(0.06 0.01 255);
+
+  --destructive: oklch(0.56 0.22 25);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Lines / inputs */
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.62 0.24 18);
+
+  /* Grid: çok subtle crimson line */
+  --background-grid:
+    linear-gradient(90deg, oklch(0.62 0.24 18 / 0.08) 1px, #0000 1px),
+    linear-gradient(oklch(0.62 0.24 18 / 0.08) 1px, #0000 1px);
+
+  /* Sidebar */
+  --sidebar: oklch(0.075 0.012 255);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: oklch(0.11 0.01 255);
+  --sidebar-accent-foreground: var(--foreground);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: var(--ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50 font-display;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply dark:text-neutral-300 text-neutral-800 font-heading;
+  }
+}

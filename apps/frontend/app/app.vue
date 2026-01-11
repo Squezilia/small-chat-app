@@ -1,5 +1,13 @@
+<script setup lang="ts">
+import { useColorMode } from '@vueuse/core';
+import { Toaster } from './components/ui/sonner';
+
+useColorMode().value = 'auto';
+</script>
+
 <template>
-  <div>
-    <h1>hello</h1>
-  </div>
+  <NuxtLayout>
+    <Toaster />
+    <NuxtPage />
+  </NuxtLayout>
 </template>
